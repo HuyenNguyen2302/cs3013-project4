@@ -6,11 +6,11 @@
 
 #define PAGE_RAM 25
 #define PAGE_SSD 100
-#define PAGE_HARD_DRIVE 1000
+#define PAGE_HDD 1000
 
 #define TIME_RAM 0.01
 #define TIME_SSD 0.1
-#define TIME_HARD_DRIVE 2.5
+#define TIME_HDD 2.5
 
 #define TRUE 0
 #define FALSE 1
@@ -34,9 +34,9 @@ Page SSD_arr[PAGE_SSD];
 
 
 
-int HARD_DRIVE_num_free_slot;
-BYTE HARD_DRIVE_free_slot[PAGE_HARD_DRIVE]; // array of indices of the free slots
-Page HARD_DRIVE_arr[PAGE_HARD_DRIVE];
+int HDD_num_free_slot;
+BYTE HDD_free_slot[PAGE_HDD]; // array of indices of the free slots
+Page HDD_arr[PAGE_HDD];
 
 
 // struct for Page Table Entry

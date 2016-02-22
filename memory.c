@@ -22,10 +22,10 @@ void init_structs() {
 	memset(SSD_free_slot, 0, sizeof(SSD_free_slot)); // 0 means the page is not free 
 	memset(SSD_arr, 0, sizeof(SSD_arr));
 
-	// initialize HARD_DRIVE struct
-	HARD_DRIVE_num_free_slot = PAGE_HARD_DRIVE;
-	memset(HARD_DRIVE_free_slot, 0, sizeof(HARD_DRIVE_free_slot)); // 0 means the page is not free 
-	memset(HARD_DRIVE_arr, 0, sizeof(HARD_DRIVE_arr));
+	// initialize HDD struct
+	HDD_num_free_slot = PAGE_HDD;
+	memset(HDD_free_slot, 0, sizeof(HDD_free_slot)); // 0 means the page is not free 
+	memset(HDD_arr, 0, sizeof(HDD_arr));
 }
 
 /** 
