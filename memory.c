@@ -13,23 +13,21 @@ void init_structs() {
 	int i;
 
 	// initialize RAM struct
-	RAM_struct.RAM_num_free_slot = PAGE_RAM;
-	for (i = 0; i < PAGE_RAM; i++) 
-		RAM_struct.RAM_free_slot[i] = i;
-	memset(RAM_struct.RAM_arr, 0, sizeof (RAM_struct.RAM_arr));
+	RAM_num_free_slot = PAGE_RAM;
+	memset(RAM_free_slot, 0, sizeof(RAM_free_slot)); // 0 means the page is not free 
+	memset(RAM_arr, 0, sizeof(RAM_arr));
 
 	// initialize SSD struct
-	SSD_struct.SSD_num_free_slot = PAGE_SSD;
-	for (i = 0; i < PAGE_SSD; i++) 
-		SSD_struct.SSD_free_slot[i] = i;
-	memset(SSD_struct.SSD_arr, 0, sizeof (SSD_struct.SSD_arr));
+	SSD_num_free_slot = PAGE_SSD;
+	memset(SSD_free_slot, 0, sizeof(SSD_free_slot)); // 0 means the page is not free 
+	memset(SSD_arr, 0, sizeof(SSD_arr));
 
 	// initialize HARD_DRIVE struct
-	HARD_DRIVE_struct.HARD_DRIVE_num_free_slot = PAGE_HARD_DRIVE;
-	for (i = 0; i < PAGE_HARD_DRIVE; i++) 
-		HARD_DRIVE_struct.HARD_DRIVE_free_slot[i] = i;
-	memset(HARD_DRIVE_struct.HARD_DRIVE_arr, 0, sizeof (HARD_DRIVE_struct.HARD_DRIVE_arr));
+	HARD_DRIVE_num_free_slot = PAGE_HARD_DRIVE;
+	memset(HARD_DRIVE_free_slot, 0, sizeof(HARD_DRIVE_free_slot)); // 0 means the page is not free 
+	memset(HARD_DRIVE_arr, 0, sizeof(HARD_DRIVE_arr));
 }
+
 /** 
 	* reserves a new memory location in the emulated RAM
 	* @return vAddr the virtual address of 
