@@ -1,10 +1,10 @@
-all: memory
+all: virtualmemory
 
-memory: memory.o
-	gcc -g memory.o -o memory
+memory: virtualmemory.o
+	gcc -g virtualmemory.o -o virtualmemory
 
-memory.o: memory.h memory.c
-	gcc -g memory.c -c
+memory.o: virtualmemory.h virtualmemory.c
+	gcc -g virtualmemory.c -c
 
 clean:
-	rm -rf *.o memory
+	rm -rf *.o virtualmemory
