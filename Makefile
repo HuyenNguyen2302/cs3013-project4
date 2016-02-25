@@ -1,3 +1,6 @@
+CC=gcc
+CFLAGS=-g
+
 all: virtualmemory
 
 memory: virtualmemory.o
