@@ -25,40 +25,43 @@ void init_memory() {
 	RAM_num_free_slot = PAGE_RAM;
 	memset(RAM_free_slot, TRUE, sizeof(RAM_free_slot)); // TRUE means the page is not free 
 	for (i = 0; i < PAGE_RAM; i++) {
-		Page_frame entry = RAM_arr[i];
+		Page_frame entry;
 		entry.value = NA;
-		printf("\t\t value = %d\n", entry.value);
 		entry.referenced_time = NA;
 		entry.referenced_num = 0;
+		RAM_arr[i] = entry;
 	}
 
 	// initialize SSD struct
 	SSD_num_free_slot = PAGE_SSD;
 	memset(SSD_free_slot, TRUE, sizeof(SSD_free_slot)); // TRUE means the page is not free 
 	for (i = 0; i < PAGE_SSD; i++) {
-		Page_frame entry = SSD_arr[i];
+		Page_frame entry;
 		entry.value = NA;
 		entry.referenced_time = NA;
 		entry.referenced_num = 0;
+		SSD_arr[i] = entry;
 	}
 
 	// initialize HDD struct
 	HDD_num_free_slot = PAGE_HDD;
 	memset(HDD_free_slot, TRUE, sizeof(HDD_free_slot)); // TRUE means the page is not free 
 	for (i = 0; i < PAGE_HDD; i++) {
-		Page_frame entry = HDD_arr[i];
+		Page_frame entry;
 		entry.value = NA;
 		entry.referenced_time = NA;
 		entry.referenced_num = 0;
+		HDD_arr[i] = entry;
 	}
 
 	// initialize the page table
 	for (i = 0; i < PAGE_TABLE; i++) {
-		PTE entry = page_table[i];
+		PTE entry;
 		entry.memory_location = NA;
 		entry.page_frame_num = NA;
 		entry.referenced_bit = NA;
 		entry.present_bit = FALSE;
+		page_table[i] = entry;
 	}
 }
 

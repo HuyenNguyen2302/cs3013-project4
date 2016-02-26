@@ -30,7 +30,7 @@
 #define FIFO 2
 #define HISTORY 3 
 
-#define MAX_TIME 4294967295
+#define MAX_TIME 4294967295u
 
 typedef unsigned char BYTE;
 typedef signed short vAddr;
