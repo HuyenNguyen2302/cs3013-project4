@@ -57,7 +57,7 @@ void init_memory() {
 	// initialize the page table
 	for (i = 0; i < PAGE_TABLE; i++) {
 		PTE entry;
-		entry.memory_location = NA;
+		entry.memory_location = 0;
 		entry.page_frame_num = NA;
 		entry.referenced_bit = NA;
 		entry.present_bit = FALSE;
