@@ -1,0 +1,555 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"NUM",
+				"NUM_PAGE_SSD	Macro"
+			],
+			[
+				"addr",
+				"addr_ref_table	struct page_ref [1000]"
+			],
+			[
+				"add",
+				"addr_ref_table	struct page_ref [1000]"
+			],
+			[
+				"ram",
+				"ram_ref_table	struct page_ref [25]"
+			],
+			[
+				"ini",
+				"init_empty_list	struct page_ref *((*)(struct page_ref *))"
+			],
+			[
+				"emp",
+				"empty_head"
+			],
+			[
+				"ram_pa",
+				"ram_page_index	int"
+			],
+			[
+				"num",
+				"num_hdd_io	int"
+			],
+			[
+				"incre",
+				"increment_ssd_io_counter"
+			],
+			[
+				"em",
+				"empty_ram_list()	void"
+			],
+			[
+				"u_int",
+				"u_int32_t	Typedef"
+			],
+			[
+				"Num",
+				"NUM_PAGE_RAM	Macro"
+			],
+			[
+				"pthread_crea",
+				"pthread_create(pthread_t *restrict, const pthread_attr_t *restrict, void *(*)(void *), void *restrict)	int"
+			],
+			[
+				"pth",
+				"pthread_t	Typedef"
+			],
+			[
+				"incl",
+				"include <header>	KeyWord"
+			],
+			[
+				"pa",
+				"page_index	int"
+			],
+			[
+				"alloca",
+				"allocate_ram_page()	int"
+			],
+			[
+				"ram_",
+				"ram_hand_pointer	struct page_ref *"
+			],
+			[
+				"Page",
+				"PAGE_SIZE_BITS	Macro"
+			],
+			[
+				"p",
+				"ptail	struct page_ref *"
+			],
+			[
+				"ssd_",
+				"ssd_hand_pointer	struct page_ref *"
+			],
+			[
+				"adva",
+				"advance_ram_pointer()	void"
+			],
+			[
+				"wri",
+				"write_back_to_hdd(page_table_entry *src_page)	void"
+			],
+			[
+				"i",
+				"page_index	int"
+			],
+			[
+				"time",
+				"timeout"
+			],
+			[
+				"ssd",
+				"ssd_ref_table	struct page_ref [100]"
+			],
+			[
+				"NUm",
+				"NUM_PAGE_HDD	Macro"
+			],
+			[
+				"re",
+				"ref_table	struct page_ref **"
+			],
+			[
+				"NU",
+				"NUM_PAGE_RAM"
+			],
+			[
+				"VI",
+				"NUM_VIRTUAL_PAGES"
+			],
+			[
+				"inc",
+				"include <header>	KeyWord"
+			],
+			[
+				"ram_pag",
+				"ram_page_ref	page_table_entry *[25]"
+			],
+			[
+				"get_",
+				"get_empty_ram_frame_num()	int"
+			],
+			[
+				"getv",
+				"get_free_virtual_page_index()	int"
+			],
+			[
+				"uid_",
+				"uid_flag"
+			],
+			[
+				"pid",
+				"pid_flag"
+			],
+			[
+				"tart",
+				"target_uid"
+			],
+			[
+				"pri",
+				"printk"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "virtualmemory.c",
+			"settings":
+			{
+				"buffer_size": 20140,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "virtualmemory.h",
+			"settings":
+			{
+				"buffer_size": 4767,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 165.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"packins",
+				"Package Control: Install Package"
+			],
+			[
+				"de",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"subli",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"insal",
+				"Package Control: Install Package"
+			],
+			[
+				"defau",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"clang",
+				"Clang Format: Format Selection"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"insa",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"C Improved ",
+				"Set Syntax: C Improved"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 431.0
+	},
+	"console":
+	{
+		"height": 562.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/harryliu/practices/cs3013/project4"
+	],
+	"file_history":
+	[
+		"/Users/harryliu/practices/cs3013/project4/Makefile",
+		"/Users/harryliu/practices/cs3013/project4/vm.sublime-project",
+		"/Users/harryliu/practices/cs3013/project4/.sublime-project",
+		"/Users/harryliu/practices/cs3013/project4/virtualmemory.sublime-project",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/SublimeGDB/sublimegdb.py",
+		"/Users/harryliu/practices/cs3013/project4/untitled",
+		"/Users/harryliu/practices/cs3013/project4/virtualmemory.h",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/harryliu/Documents/course materials/2016-Spring-C/Operating System/projects/4/cs3013-project4-dev/virtualmemory.c",
+		"/Users/harryliu/practices/cs4341/project5/CSP/.git/MERGE_MSG",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"SSD",
+			"write_back_to_hdd",
+			"evict",
+			"store_value",
+			"store",
+			"free_set_addr_empty_head",
+			"page_hand_pointer",
+			"free_ram_empty_hand",
+			"empty_ram_list",
+			"empty_list",
+			"init_empty_list",
+			"init_ram_empty_list",
+			"SSD_write",
+			"allocate_page",
+			"allocate_memory",
+			"allocate_page",
+			"set_ram_hand",
+			"set_hand_pointer",
+			"allocate_page",
+			"hdd",
+			"get_ssd_page_num",
+			"allocate_ram",
+			"allocate_page",
+			"set_ram_hand_pointer",
+			"hand_pointer",
+			".present",
+			"get_value(",
+			"get_value",
+			"store_value",
+			"page_page",
+			"ref_table",
+			"ram_ref_table",
+			"ram_ref_table\nram_ref_table",
+			"print",
+			"-----",
+			"ram_hand_pointer",
+			"page_hand",
+			"advance_ssd_pointer",
+			"write_back_to_ssd",
+			"++",
+			"+++",
+			"++++",
+			"write_back_to_ssd",
+			"timeout=",
+			"timeout",
+			"gdb",
+			"allocate_ram_page",
+			"write_back",
+			"frame",
+			"evict_page",
+			"write_back",
+			"create",
+			"get_ram_page_num",
+			"get_empty_ram_page_num",
+			"frame",
+			"page_frame_index",
+			"++++",
+			"117",
+			"get_empty_ram_frame_num",
+			"allocate_memory"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"page",
+			"virtual_page_index"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "virtualmemory.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/C Improved/C Improved.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "virtualmemory.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4767,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								432,
+								441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 166.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 65.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.cc":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "vm.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

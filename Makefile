@@ -1,12 +1,9 @@
-CC=gcc
-CFLAGS=-g
-
 all: virtualmemory
 
-memory: virtualmemory.o
-	gcc -g virtualmemory.o -o virtualmemory
+virtualmemory: virtualmemory.o
+	gcc -g virtualmemory.o -pthread -o virtualmemory
 
-memory.o: virtualmemory.h virtualmemory.c
+virtualmemory.o: virtualmemory.h virtualmemory.c
 	gcc -g virtualmemory.c -c
 
 clean:

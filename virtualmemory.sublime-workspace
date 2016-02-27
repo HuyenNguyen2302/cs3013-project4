@@ -1,0 +1,369 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"timeout"
+			],
+			[
+				"NUM",
+				"NUM_PAGE_RAM	Macro"
+			],
+			[
+				"ssd",
+				"ssd_ref_table	struct page_ref [100]"
+			],
+			[
+				"NUm",
+				"NUM_PAGE_HDD	Macro"
+			],
+			[
+				"Num",
+				"NUM_VIRTUAL_PAGES	Macro"
+			],
+			[
+				"re",
+				"ref_table	struct page_ref **"
+			],
+			[
+				"add",
+				"addr_empty_head	struct page_ref *"
+			],
+			[
+				"NU",
+				"NUM_PAGE_RAM"
+			],
+			[
+				"VI",
+				"NUM_VIRTUAL_PAGES"
+			],
+			[
+				"inc",
+				"include <header>	KeyWord"
+			],
+			[
+				"ram_pag",
+				"ram_page_ref	page_table_entry *[25]"
+			],
+			[
+				"get_",
+				"get_empty_ram_frame_num()	int"
+			],
+			[
+				"ram",
+				"ram_frame_num	int"
+			],
+			[
+				"getv",
+				"get_free_virtual_page_index()	int"
+			],
+			[
+				"uid_",
+				"uid_flag"
+			],
+			[
+				"pid",
+				"pid_flag"
+			],
+			[
+				"tart",
+				"target_uid"
+			],
+			[
+				"pri",
+				"printk"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "virtualmemory.c",
+			"settings":
+			{
+				"buffer_size": 10633,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 207.0,
+		"last_filter": "defau",
+		"selected_items":
+		[
+			[
+				"defau",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"clang",
+				"Clang Format: Format Selection"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"insa",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"C Improved ",
+				"Set Syntax: C Improved"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 431.0
+	},
+	"console":
+	{
+		"height": 584.0,
+		"history":
+		[
+			"clear",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/harryliu/practices/cs3013/project4/.sublime-project",
+		"/Users/harryliu/practices/cs3013/project4/virtualmemory.sublime-project",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/SublimeGDB/sublimegdb.py",
+		"/Users/harryliu/practices/cs3013/project4/untitled",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+		"/Users/harryliu/practices/cs3013/project4/virtualmemory.h",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/harryliu/practices/cs3013/project4/Makefile",
+		"/Users/harryliu/Documents/course materials/2016-Spring-C/Operating System/projects/4/cs3013-project4-dev/virtualmemory.c",
+		"/Users/harryliu/practices/cs4341/project5/CSP/.git/MERGE_MSG",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/harryliu/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"timeout=",
+			"timeout",
+			"gdb",
+			"allocate_ram_page",
+			"write_back",
+			"frame",
+			"evict_page",
+			"write_back",
+			"create",
+			"get_ram_page_num",
+			"get_empty_ram_page_num",
+			"frame",
+			"page_frame_index",
+			"++++",
+			"117",
+			"get_empty_ram_frame_num",
+			"allocate_memory"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"page",
+			"virtual_page_index"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "virtualmemory.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2377,
+								2377
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C Improved/C Improved.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 65.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.cc":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "virtualmemory.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

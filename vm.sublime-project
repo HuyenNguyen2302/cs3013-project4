@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"sublimegdb_workingdir": "${folder:${project_path:virtualmemory}}",
+        "sublimegdb_commandline": "/usr/local/bin/gdb --interpreter=mi ./virtualmemory",
+        "sublimegdb_connection": "target extended-remote localhost:4000"
+	}
+}
