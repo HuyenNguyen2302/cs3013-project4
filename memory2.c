@@ -36,7 +36,7 @@ int main(int argc, const char *argv[]) {
 	*/ 
 int test_create_page(int num_page){
 	int i;
-	for (int i = 0; i < num_page; ++i) {
+	for (i = 0; i < num_page; ++i) {
 		vAddr result_create_page = create_page();
 		if (result_create_page == -1) { 
 			printf("The page table is full. Failed to add page %d.\n", i);
