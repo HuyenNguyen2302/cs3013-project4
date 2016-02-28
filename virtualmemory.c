@@ -10,6 +10,7 @@
 #include <pthread.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #define DEBUG FALSE
 pthread_mutex_t mutex;
@@ -47,17 +48,17 @@ void test_memory() {
     free_page(address1[i]);
   }
 
-  for (i = 0; i < 10; i++) {
-    address2[i] = create_page();
-  }
+  // for (i = 0; i < 10; i++) {
+  //   address2[i] = create_page();
+  // }
 
-  for (i = 0; i < 10; i++) {
-    if (address2[i] != -1) {
-      store_value(address2[i], tmp);
-      value1 = (int *)get_value(address2[i]);
-      printf("%d\n", *value1);
-    }
-  }
+  // for (i = 0; i < 10; i++) {
+  //   if (address2[i] != -1) {
+  //     store_value(address2[i], tmp);
+  //     value1 = (int *)get_value(address2[i]);
+  //     printf("%d\n", *value1);
+  //   }
+  // }
 
   // for (i = 0; i < 200; i++) {
   //   // tmp = rand() % 1000;
@@ -623,15 +624,17 @@ void empty_ram_list(){
 } 
 
 int evict_ram_page(){
-  return clock_page_replacement(
-    ram_page_table, 
-    ram_ref_table, 
-    ram_hand_pointer, 
-    NUM_PAGE_RAM,
-    get_ssd_io_counter,
-    increment_ssd_io_counter,
-    advance_ram_pointer, 
-    write_back_to_ssd);
+  return fifo_page_replacement(ram_hand_pointer, set_ram_hand_pointer);
+  // return random_page_replacement(NUM_PAGE_RAM);
+  // return clock_page_replacement(
+  //   ram_page_table, 
+  //   ram_ref_table, 
+  //   ram_hand_pointer, 
+  //   NUM_PAGE_RAM,
+  //   get_ssd_io_counter,
+  //   increment_ssd_io_counter,
+  //   advance_ram_pointer, 
+  //   write_back_to_ssd);
 }
 
 int get_ssd_io_counter() {
@@ -662,15 +665,17 @@ void empty_ssd_list(){
 } 
 
 int evict_ssd_page(){
-  return clock_page_replacement(
-    ssd_page_table, 
-    ssd_ref_table, 
-    ssd_hand_pointer, 
-    NUM_PAGE_SSD,
-    get_hdd_io_counter,
-    increment_hdd_io_counter,
-    advance_ssd_pointer, 
-    write_back_to_hdd);
+  return fifo_page_replacement(ssd_hand_pointer, set_ssd_hand_pointer);
+  // return random_page_replacement(NUM_PAGE_SSD);
+  // return clock_page_replacement(
+  //   ssd_page_table, 
+  //   ssd_ref_table, 
+  //   ssd_hand_pointer, 
+  //   NUM_PAGE_SSD,
+  //   get_hdd_io_counter,
+  //   increment_hdd_io_counter,
+  //   advance_ssd_pointer, 
+  //   write_back_to_hdd);
 } 
 
 int get_hdd_io_counter() {
@@ -724,7 +729,17 @@ struct page_ref* free_set_addr_empty_head(struct page_ref * curr){
 /*
  * Replace a page with FIFO algorithm
  */
-int fifo_page_replacement() { return 0; }
+int fifo_page_replacement(struct page_ref * hand_pointer, struct page_ref *(set_hand_pointer())) {
+  set_hand_pointer(hand_pointer->next);
+  return hand_pointer->page_index;
+}
+
+/*
+ * Replace a page with random algorithm
+ */
+int random_page_replacement(int num_avail_pages) {
+  return random() % num_avail_pages;
+}
 
 /*
  * This method clean up RAM periodically
@@ -808,6 +823,7 @@ int allocate_page(
 
 void init_memory() {
   int i;
+  srand(time(NULL));
   // pthread_t cleaner;
 
   // initialize RAM

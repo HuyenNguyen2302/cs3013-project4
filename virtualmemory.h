@@ -112,7 +112,7 @@ int clock_page_replacement(page_table_entry *page_table,
   struct page_ref *(*advance_pointer)(),
   void *(*write_back)(int));
 
-int aging_page_replacement();
+int random_page_replacement(int num_avail_pages);
 int get_ava_virtual_page();
 void *write_back_to_ssd(int src_page_index);
 void *write_back_to_hdd(int src_page_index);
