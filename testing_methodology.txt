@@ -1,0 +1,12 @@
+// Name: Huyen Nguyen 
+
+Testing methodology: 
+
+The page table is full. Failed to add page 5.
+
+The page table is full. Failed to add page 5.
+CONGRATS: NEW_VALUE = 10
+
+The page table is full. Failed to add page 5.
+CONGRATS: NEW_VALUE = 10
+ERROR: Sorry. The page frame was deleted.
