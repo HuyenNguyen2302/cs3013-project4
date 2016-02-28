@@ -408,7 +408,13 @@ int choose_page_frame_history(int memory_location, int avoid_index) {
 		return choose_page_frame(memory_location, avoid_index);
 }
 
-// decide which algorithm to use and return its result
+/** 
+	* decide which algorithm to use and return its result
+	* according to the user's choice
+	* @param memory_location RAM/SSD/HDD
+	* @param avoid_index the index that must not be chosen
+	* @return the index of the page chosen
+	*/
 int choose_page_frame(int memory_location, int avoid_index) {
 	int chosen_page_frame;
 	switch(option) {
@@ -809,6 +815,10 @@ void free_page(vAddr address) {
 	return;
 }
 
+/**
+	* prints all information about every single entry
+	* in the RAM/SSD/HDD/page table arrays
+	*/
 void print_all() {
 	int i; 
 

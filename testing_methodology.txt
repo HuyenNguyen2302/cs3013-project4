@@ -2,11 +2,46 @@
 
 Testing methodology: 
 
+So, the project spec requires:
+PAGE_RAM = 25
+PAGE_SSD = 100
+PAGE_HDD = 1000
+PAGE_TABLE = 1000 
+
+But for the purpose of testing my APIs in a short amount of time, I reduce the size of arrays so that:
+PAGE_RAM = 2
+PAGE_SSD = 2
+PAGE_HDD = 2
+PAGE_TABLE = 5
+
+I wrote 3 testing programs:
+
+=============
+1. int test_create_page(int num_page):
+
+As the name stated, this function tests create_page(). The value of the parameter being passed in from the main function is PAGE_TABLE + 1 (which is 6), which means this function will always return 1 (indicate failure).
+
+For the output below, the number of pages are counted from 0.
+
+Entire after running up to this function:
 The page table is full. Failed to add page 5.
 
+=============
+2. int test_store_value_and_get_value(vAddr address, int new_value):
+
+This function test store_value and get_value. I basically used store_value on address = 1, which is in the HDD (you can confirm this by using the function print_all(), I wrote that function to help me debug). Then, I use get_value on the same address to see if the value is successfully updated. 
+
+Entire after running up to this function:
 The page table is full. Failed to add page 5.
 CONGRATS: NEW_VALUE = 10
 
+
+=============
+3. int test_free_page_and_get_value(vAddr address):
+
+This function tries to free the page associated with the given virtual address, and then uses get_value on the same virtual address to see if it's possible to get the value of the page frame that has just been freed.
+
+Entire after running up to this function:
 The page table is full. Failed to add page 5.
 CONGRATS: NEW_VALUE = 10
 ERROR: Sorry. The page frame was deleted.
