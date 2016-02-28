@@ -8,12 +8,12 @@
 #include <stdlib.h>
 #include <stdio.h>  
 
-#define PAGE_RAM 2  // DELETE
-#define PAGE_SSD 2
-#define PAGE_HDD 2
-#define PAGE_TABLE 5
+#define PAGE_RAM 25  // DELETE
+#define PAGE_SSD 100
+#define PAGE_HDD 1000
+#define PAGE_TABLE 1000
 
-#define TIME_RAM 0.01 * 1000000
+#define TIME_RAM 0.01 * 1000000 
 #define TIME_SSD 0.1 * 1000000
 #define TIME_HDD 2.5 * 1000000
 
