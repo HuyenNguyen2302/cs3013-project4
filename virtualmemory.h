@@ -24,7 +24,7 @@
 #define DELAY_RAM 0.01
 #define DELAY_SSD 0.1
 #define DELAY_HDD 2.5
-#define ONE_SECOND 100
+#define ONE_SECOND 10000
 
 #define TRUE 1
 #define FALSE 0
@@ -102,7 +102,11 @@ void init_memory();
 u_int32_t retrive_value_from_ssd(int page_index);
 u_int32_t retrive_value_from_hdd(int page_index);
 void test_memory();
-int fifo_page_replacement();
+int second_chance_page_replacement(page_table_entry *page_table,
+  struct page_ref *ref_table,
+  struct page_ref *hand_pointer, 
+  struct page_ref *(*advance_pointer)(),
+  void *(*write_back)(int));
 int clock_page_replacement(page_table_entry *page_table,
   struct page_ref *ref_table,
   struct page_ref *hand_pointer, 

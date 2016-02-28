@@ -27,11 +27,11 @@ void test_memory() {
   // Allocate memory
   vAddr address1[NUM_VIRTUAL_PAGES];
   vAddr address2[NUM_VIRTUAL_PAGES];
-  for (i = 0; i < 200; i++) {
+  for (i = 0; i < 300; i++) {
     address1[i] = create_page();
   }
 
-  for (i = 100; i < 110; i++) {
+  for (i = 0; i < 300; i++) {
     // tmp = rand() % 1000;
     tmp = i;
     if (address1[i] != -1) {
@@ -42,11 +42,11 @@ void test_memory() {
     // printf("%d ", tmp);
   }
 
-  value = NULL;
-  for (i = 0; i < 10; i++) {
-    // value = (int *)get_value(address[i]);
-    free_page(address1[i]);
-  }
+  // value = NULL;
+  // for (i = 0; i < 300; i++) {
+  //   // value = (int *)get_value(address[i]);
+  //   free_page(address1[i]);
+  // }
 
   // for (i = 0; i < 10; i++) {
   //   address2[i] = create_page();
@@ -624,17 +624,21 @@ void empty_ram_list(){
 } 
 
 int evict_ram_page(){
-  return fifo_page_replacement(ram_hand_pointer, set_ram_hand_pointer);
+  // return second_chance_page_replacement(ram_page_table,
+  // ram_ref_table,
+  // ram_hand_pointer,
+  // advance_ram_pointer,
+  // write_back_to_ssd);
   // return random_page_replacement(NUM_PAGE_RAM);
-  // return clock_page_replacement(
-  //   ram_page_table, 
-  //   ram_ref_table, 
-  //   ram_hand_pointer, 
-  //   NUM_PAGE_RAM,
-  //   get_ssd_io_counter,
-  //   increment_ssd_io_counter,
-  //   advance_ram_pointer, 
-  //   write_back_to_ssd);
+  return clock_page_replacement(
+    ram_page_table, 
+    ram_ref_table, 
+    ram_hand_pointer, 
+    NUM_PAGE_RAM,
+    get_ssd_io_counter,
+    increment_ssd_io_counter,
+    advance_ram_pointer, 
+    write_back_to_ssd);
 }
 
 int get_ssd_io_counter() {
@@ -665,17 +669,21 @@ void empty_ssd_list(){
 } 
 
 int evict_ssd_page(){
-  return fifo_page_replacement(ssd_hand_pointer, set_ssd_hand_pointer);
+  // return second_chance_page_replacement(ssd_page_table,
+  // ssd_ref_table,
+  // ssd_hand_pointer,
+  // advance_ssd_pointer,
+  // write_back_to_hdd);
   // return random_page_replacement(NUM_PAGE_SSD);
-  // return clock_page_replacement(
-  //   ssd_page_table, 
-  //   ssd_ref_table, 
-  //   ssd_hand_pointer, 
-  //   NUM_PAGE_SSD,
-  //   get_hdd_io_counter,
-  //   increment_hdd_io_counter,
-  //   advance_ssd_pointer, 
-  //   write_back_to_hdd);
+  return clock_page_replacement(
+    ssd_page_table, 
+    ssd_ref_table, 
+    ssd_hand_pointer, 
+    NUM_PAGE_SSD,
+    get_hdd_io_counter,
+    increment_hdd_io_counter,
+    advance_ssd_pointer, 
+    write_back_to_hdd);
 } 
 
 int get_hdd_io_counter() {
@@ -729,9 +737,38 @@ struct page_ref* free_set_addr_empty_head(struct page_ref * curr){
 /*
  * Replace a page with FIFO algorithm
  */
-int fifo_page_replacement(struct page_ref * hand_pointer, struct page_ref *(set_hand_pointer())) {
-  set_hand_pointer(hand_pointer->next);
-  return hand_pointer->page_index;
+int second_chance_page_replacement(page_table_entry *page_table,
+  struct page_ref *ref_table,
+  struct page_ref *hand_pointer,
+  struct page_ref *(*advance_pointer)(),
+  void *(*write_back)(int)) {
+
+  pthread_t io_writer;
+
+  // loop through page index
+  while(TRUE) {
+    if (!hand_pointer->io_scheduled) {
+      // When is not scheduled for I/O
+      if (!page_table[hand_pointer->page_index].referenced) {
+        // Memory not referenced
+        if(!page_table[hand_pointer->page_index].modified){
+          // Evict a clean page
+          page_table[hand_pointer->page_index].present = FALSE;
+          advance_pointer();
+          if (DEBUG) puts("Evict not referenced");
+          return page_table[hand_pointer->page_index].page_frame_num;
+        } else {
+          // Find a dirty page, schedule write back to target_device
+            hand_pointer->io_scheduled = TRUE;
+            write_back(page_table[hand_pointer->page_index].page_frame_num);  
+        }
+      } else {
+        // Clear R bit when referenced
+        page_table[hand_pointer->page_index].referenced = FALSE;
+      }
+    }
+    hand_pointer = advance_pointer();
+  }
 }
 
 /*
@@ -739,25 +776,6 @@ int fifo_page_replacement(struct page_ref * hand_pointer, struct page_ref *(set_
  */
 int random_page_replacement(int num_avail_pages) {
   return random() % num_avail_pages;
-}
-
-/*
- * This method clean up RAM periodically
- */
-// int clean_ram() {
-//   int i;
-//   for(i = 0; i < NUM_PAGE_RAM; i++) {
-//     ram_page_table
-//   }
-// }
-
-/*
- * This method clean up memory and periodically
- */
-int reference_cleaner(){
-  while(1){
-    usleep(ONE_SECOND);
-  }
 }
 
 /*
